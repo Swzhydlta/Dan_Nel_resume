@@ -1,40 +1,37 @@
-// var boxItem = document.querySelectorAll(".box-item")
+const cards = document.querySelectorAll(".work-item");
+// const image = document.getElementById("hero-image");
 
-// var array = ["a", "b", "c", "d", "e"]
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("show", entry.isIntersecting);
+    });
+  },
+  {
+    threshold: 0.5,
+  }
+);
 
-// boxItem.forEach(box => {
-//   box.addEventListener('click', function handleClick(event) {
-//     console.log('box clicked');
-//     for (var i = 0; i < array.length; i ++){
-//     	(function(i) {
-//         setInterval(function() {
-//             box.innerHTML = array[i]
-//         }, 500)
-//     })(i);
+// observer.observe(image);
+console.log(content);
+cards.forEach((card) => {
+  observer.observe(card);
+});
+// var boxItems = document.querySelectorAll(".box-item")
+// var array = ["/", "]", "+", "/", "]", "+", "/", "]", "+", "+"]
 
-//     }
-//   });
-// });
+// boxItems.forEach(box => {
 
-var boxItems = document.querySelectorAll(".box-item")
-var array = ["/", "]", "+", "/", "]", "+", "/", "]", "+", "+"]
+// 	box.addEventListener("mouseover", function() {
+// 		let count = 0
+// 		setInterval(function() {
+// 			if (count < 10 ) {
+// 			box.innerHTML = array[count]
+// 			count += 1
+// 			}
 
-boxItems.forEach(box => {
+// 		}, 50)
 
-	box.addEventListener("mouseover", function() {
-		let count = 0
-		setInterval(function() {
-			if (count < 10 ) {
-			box.innerHTML = array[count]
-			count += 1
-			}
+// 	})
 
-
-		}, 50)
-
-
-
-	})
-
-})
-
+// })

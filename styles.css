@@ -13,6 +13,13 @@ a:hover {
 	color: black;
 }
 
+/* #hero-image {
+	transform: translateX(-100px);
+	opacity: 0;
+	transition: 150ms;
+	opacity: 10;
+} */
+
 .box {
 	position: absolute;
 	top:  60px;
@@ -31,10 +38,11 @@ a:hover {
 
 }
 
-.hero-image-container {
+#hero-image-container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	/* opacity: 0.2; */
 }
 
 #box-container {
@@ -112,17 +120,35 @@ a:hover {
 	padding-bottom: 16px;
 
 }
+.mickey {
+	max-height: 50px;
+}
+
 .work-item {
 	background-color: #eef0f2;
 	border-radius: 16px;
-	/* border: 2px solid lightgray; */
-	/* box-shadow: -1px 2px 10px 3px rgba(0,0,0,0.15); */
 	cursor: pointer;
 	transition: all .2s ease-in-out;
-	/* padding-left: 40px !important; */
-	/* padding-right: 40px !important; */
 	width: 100%;
+	transform: translateX(100px);
+	opacity: 0;
+	transition: 150ms;
 }
+
+/* .card {
+	border: 1px solid black;
+ 	padding: .5 rem;
+	transform: translateX(100px);
+	opacity: 0;
+	transition: 150ms;
+} */
+
+.show {
+	transform: translateX(0) !important;
+	opacity: 1 !important;
+}
+
+
 
 .work-item-label {
 	font-weight: 500;
@@ -135,6 +161,8 @@ a:hover {
 }
 
 .work-item:hover { transform: scale(1.02); }
+
+
 
 .content-container {
 	padding: 0 100px 0 100px;
@@ -207,11 +235,19 @@ a:hover {
 	font-weight: 400;
 }
 
+.card-container {
+	display: flex;
+	flex-direction: column;
+}
+
+
+
 @media only screen and (max-width: 600px) {
 	.content-container {
 		padding: 0 20px 0 20px;
 	}
-	.hero-image {
+
+	#hero-image {
 		/* display: none; */
 		/* width: 100%; */
 		height: 400px;
@@ -220,7 +256,7 @@ a:hover {
 		padding: 46px 0 0 0;
 	}
 
-	.hero-image-container {
+	#hero-image-container {
 		margin-bottom: 16px;
 	}
 	.projects-wrapper {
